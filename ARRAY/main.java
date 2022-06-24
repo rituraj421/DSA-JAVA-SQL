@@ -1,15 +1,8 @@
-package src;
 
-// package src;
 
-// public class App {
-//     public static void main(String[] args) throws Exception {
-//         System.out.println("Hello, World!");
-//     }
-// }
 import java.util.Scanner;
-public class App {
-    public static void main(String[] args) {
+public class main {
+    public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter n");
         int n = sc.nextInt();
@@ -58,4 +51,5 @@ public class App {
         
     }
     
+
 

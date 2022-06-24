@@ -1,7 +1,6 @@
-package src;
-// import java.util.Scanner;
+// package ARRAY;
 
-public class basic {
+public class first {
     public static void main(String[] args){
         // Scanner sc = new Scanner(System.in);
         // naive method for arrays
@@ -18,3 +17,4 @@ public class basic {
         // }
     }
 }
+
