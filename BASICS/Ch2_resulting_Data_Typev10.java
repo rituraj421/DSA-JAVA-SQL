@@ -1,4 +1,6 @@
-package com.company;
+package BASICS;
+
+// package com.company;
 
 public class Ch2_resulting_Data_Typev10 {
     public static void main(String[] args) {
