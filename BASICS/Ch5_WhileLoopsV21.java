@@ -1,4 +1,4 @@
-package com.company;
+package BASICS;
 
 public class Ch5_WhileLoopsV21 {
     public static void main(String[] args) {

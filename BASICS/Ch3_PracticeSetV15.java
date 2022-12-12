@@ -1,6 +1,4 @@
-package com.company;
-
-import java.util.Locale;
+package BASICS;
 
 public class Ch3_PracticeSetV15 {
     public static void main(String[] args) {

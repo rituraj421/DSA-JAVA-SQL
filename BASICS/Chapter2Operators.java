@@ -1,4 +1,4 @@
-package com.company;
+package BASICS;
 
 public class Chapter2Operators {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.company;
+package BASICS;
 
 class MyMainEmployee{
     private int id;

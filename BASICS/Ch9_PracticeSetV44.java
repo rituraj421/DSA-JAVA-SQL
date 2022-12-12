@@ -1,4 +1,4 @@
-package com.company;
+package BASICS;
 
 class cylinder{
     private int radius;
