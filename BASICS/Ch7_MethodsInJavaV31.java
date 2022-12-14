@@ -1,4 +1,4 @@
-package com.company;
+package BASICS;
 
 public class Ch7_MethodsInJavaV31 {
     static int logic(int x, int y){

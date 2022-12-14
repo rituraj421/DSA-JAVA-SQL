@@ -1,4 +1,4 @@
-package com.company;
+package BASICS;
 
 public class Ch7_OverloadingInJavaV32 {
     static void foo(){

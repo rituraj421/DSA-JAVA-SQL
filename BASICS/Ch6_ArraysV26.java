@@ -1,4 +1,4 @@
-package com.company;
+package BASICS;
 
 public class Ch6_ArraysV26 {
     public static void main(String[] args) {

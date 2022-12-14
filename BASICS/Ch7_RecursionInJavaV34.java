@@ -1,4 +1,4 @@
-package com.company;
+package BASICS;
 
 public class Ch7_RecursionInJavaV34 {
     static int factorial(int n){
