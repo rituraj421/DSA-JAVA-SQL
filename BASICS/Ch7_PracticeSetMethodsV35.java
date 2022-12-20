@@ -1,4 +1,4 @@
-package com.company;
+package BASICS;
 
 public class Ch7_PracticeSetMethodsV35 {
     static void multiplication(int n){

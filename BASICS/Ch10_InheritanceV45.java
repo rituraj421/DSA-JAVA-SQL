@@ -1,4 +1,4 @@
-package com.company;
+package BASICS;
 
 class Base{
     int x;

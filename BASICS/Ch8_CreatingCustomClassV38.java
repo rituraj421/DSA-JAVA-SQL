@@ -1,4 +1,4 @@
-package com.company;
+package BASICS;
 class Employee1{
     int salary;
     int id;
