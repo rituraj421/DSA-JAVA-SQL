@@ -14,6 +14,6 @@ public class loop {
         }else{
             System.out.println("It's not even number");
         }
-
+        sc.close();
     }
 }

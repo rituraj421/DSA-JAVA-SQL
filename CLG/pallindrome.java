@@ -1,19 +1,20 @@
 package CLG;
 
 import java.util.Scanner;
-public class pallindrome {
-    public static void main (String[] args){
-        //FIND THE SUM OF DIGITS
-        //reverse the number
-        //find pallindrome
-        //a+= a+++++a+--a+a-- find output 
 
-        Scanner sc =  new Scanner(System.in);
+public class pallindrome {
+    public static void main(String[] args) {
+        // FIND THE SUM OF DIGITS
+        // reverse the number
+        // find pallindrome
+        // a+= a+++++a+--a+a-- find output
+
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter a");
-        int a = sc.nextInt(); 
-        
+        // int a = sc.nextInt();
+
         // while(a<=7){
-        //     System.out.println(a++ + ++a + --a + a--);
+        // System.out.println(a++ + ++a + --a + a--);
 
         // }
 
@@ -26,27 +27,27 @@ public class pallindrome {
         // int x = 2;
         // int sum = 0;
         // for(int j =1; j<=20; j++ ){
-        //     sum + = math.pow(-1, j-1);
-        //     *math.pow(x,j);
-            
+        // sum + = math.pow(-1, j-1);
+        // *math.pow(x,j);
+
         // }
         // System.out.println(sum);
 
         // for(int j = 1; j<=a; j++){
-        //     System.out.print("l");
-            
-        //it has two methods 
-            for(int i = 0; i<=5; i++){
-                System.out.print("");
-                for(int j=0; j<=i; j++){
-                    System.out.print("1");
-                }
-                // for(int j=0; j<=i; j++){
-                //     System.out.print("*");
-                // }
-                System.out.print(" ");
-                
-            }
-        }
-    }
+        // System.out.print("l");
 
+        // it has two methods
+        for (int i = 0; i <= 5; i++) {
+            System.out.print("");
+            for (int j = 0; j <= i; j++) {
+                System.out.print("1");
+            }
+            // for(int j=0; j<=i; j++){
+            // System.out.print("*");
+            // }
+            System.out.print(" ");
+
+        }
+        sc.close();
+    }
+}

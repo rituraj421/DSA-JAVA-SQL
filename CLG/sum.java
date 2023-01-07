@@ -36,21 +36,23 @@ public class sum {
         // double sum;
         // int nume = 1;
         // for(int i = 2; i<=20; i = i+3){
-            
+
         // }
         // sum = sum+(nume/i);
-        //     System.out.println(sum);
+        // System.out.println(sum);
 
-        //oprint the sum of series , 3/x-5/x^2+ 7/x^4...
+        // oprint the sum of series , 3/x-5/x^2+ 7/x^4...
         // double summ = 0 , k=1;
-        for (int i = 3; i<= input; i = i+2){
+        for (int i = 3; i <= input; i = i + 2) {
             System.out.println(i);
         }
-        for (int j = 0; j<=40; j = j+2){
+        for (int j = 0; j <= 40; j = j + 2) {
             System.out.println(j);
             j = (int) Math.pow(j, 2);
         }
         // k = k * -1;
         // summ = (i/j);
+
+        sc.close();
     }
 }
