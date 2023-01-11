@@ -1,4 +1,4 @@
-package CRASH;
+package CRASH; 
 
 import java.util.Scanner;
 

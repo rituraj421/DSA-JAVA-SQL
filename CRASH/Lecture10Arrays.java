@@ -1,5 +1,5 @@
 package CRASH;
-
+ 
 import java.util.Scanner;
 
 public class Lecture10Arrays {
