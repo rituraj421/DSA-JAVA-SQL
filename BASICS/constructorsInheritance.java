@@ -44,7 +44,7 @@ class Derived0 extends Base0{
 // }
 public class constructorsInheritance {
     public static void main(String[] args) {
-        Base0 b = new Base0();
-        Derived0 d0 = new Derived0();
+        // Base0 b = new Base0();
+        // Derived0 d0 = new Derived0();
     }
 }
