@@ -22,10 +22,11 @@ class Game {
     }
 
     void takeUserInput() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Guess the number : ");
-        inputNumber = sc.nextInt();
-        // sc.close();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Guess the number : ");
+            inputNumber = sc.nextInt();
+            // sc.close();
+        }
     }
 
     boolean isCorrectNumber() {
