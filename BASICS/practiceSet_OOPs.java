@@ -42,7 +42,7 @@ class Game {
     }
 }
 
-public class oopsPracticeSet {
+public class practiceSet_OOPs {
     public static void main(String[] args) {
         /*
          * 
