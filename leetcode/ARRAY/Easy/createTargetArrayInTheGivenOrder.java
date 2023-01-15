@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class solution {
-public class createTargetArrayInTheGivenOrder(int[] nums, int[] index) {
+  public int[] createTargetArrayInTheGivenOrder(int[] nums, int[] index) {
     List<Integer> list = new ArrayList<>();
     for (int i = 0; i < nums.length; i++) {
       list.add(index[i], nums[i]);
@@ -14,5 +14,5 @@ public class createTargetArrayInTheGivenOrder(int[] nums, int[] index) {
       ans[i] = list.get(i);
     }
     return ans;
-}
+  }
 }
