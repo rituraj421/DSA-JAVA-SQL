@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package CRASH;
 public class Lecture13stringbuilder {
     public static void main(String[] args) {
      StringBuilder sb = new StringBuilder("ritu");

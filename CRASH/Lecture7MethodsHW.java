@@ -1,3 +1,5 @@
+package CRASH;
+
 import java.util.Scanner;
 public class Lecture7MethodsHW {
     //problem 1
@@ -39,29 +41,30 @@ public class Lecture7MethodsHW {
     }
     */
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter x");
-        int x = sc.nextInt();
-        checkPrime(x);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter x");
+            int x = sc.nextInt();
+            checkPrime(x);
 
-        //problem 2
-        System.out.println("Enter y");
-        int y = sc.nextInt();
-        checkEven(y);
+            //problem 2
+            System.out.println("Enter y");
+            int y = sc.nextInt();
+            checkEven(y);
 
-        //problem 3
-        /*
-        System.out.println("Enter z");
-        int z = sc.nextInt();
-        printTable(z);
-        }
-        */
+            //problem 3
+            /*
+            System.out.println("Enter z");
+            int z = sc.nextInt();
+            printTable(z);
+            }
+            */
 
-        //problem 3
-        System.out.println("Enter z");
-        int z = sc.nextInt();
-        for(int i = 1; i<=10; i++){
-            System.out.println(z*i);
+            //problem 3
+            System.out.println("Enter z");
+            int z = sc.nextInt();
+            for(int i = 1; i<=10; i++){
+                System.out.println(z*i);
+            }
         }
     }
 }
