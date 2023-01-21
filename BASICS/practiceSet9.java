@@ -1,6 +1,6 @@
 package BASICS;
 
-class cylinder {
+class cylinderrrrr {
     private int radius;
     private int height;
 
@@ -29,16 +29,16 @@ class cylinder {
 public class practiceSet9 {
     public static void main(String[] args) {
         // problem 1
-        cylinder myCylinder = new cylinder();
-        myCylinder.setHeight(12);
-        int h = myCylinder.getHeight();
+        cylinderrrrr mycylinderrrrr = new cylinderrrrr();
+        mycylinderrrrr.setHeight(12);
+        int h = mycylinderrrrr.getHeight();
         System.out.println(h);
-        myCylinder.setRadius(9);
-        System.out.println(myCylinder.getRadius());
+        mycylinderrrrr.setRadius(9);
+        System.out.println(mycylinderrrrr.getRadius());
 
         // problem 2
-        System.out.println(myCylinder.surfaceArea());
-        // System.out.println(myCylinder.volume());
+        System.out.println(mycylinderrrrr.surfaceArea());
+        // System.out.println(mycylinderrrrr.volume());
 
         // problem 3
 
