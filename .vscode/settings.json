@@ -3,5 +3,9 @@
         "ARRAY",
         ""
     ],
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.dependency.packagePresentation": "flat",
+    "java.cleanup.actionsOnSave": [
+        "qualifyMembers"
+    ]
 }

@@ -16,3 +16,5 @@
 - `leetcode` ( it contains problems from leetcode for DSA )
 
 <hr>
+
+`CTRL` + `Shift` + `P` and type, `java clean`, and IDE will show you the suggestion tip for, `Java: Clean the Java language server workspace.` Upon selection, agree and restart the IDE. It will clean the language server workspace for you.
