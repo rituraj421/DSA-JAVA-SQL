@@ -4,7 +4,7 @@
         ""
     ],
     "java.debug.settings.onBuildFailureProceed": true,
-    "java.dependency.packagePresentation": "flat",
+    "java.dependency.packagePresentation": "hierarchical",
     "java.cleanup.actionsOnSave": [
         "qualifyMembers"
     ]
