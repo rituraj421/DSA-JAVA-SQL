@@ -1,0 +1,66 @@
+-- SELECT name, major FROM codecamp.student ORDER BY name;
+
+-- SELECT * FROM codecamp.student ORDER BY name DESC; return in -- descending order
+
+-- SELECT * FROM codecamp.student LIMIT 2; -- will print only two students
+
+-- CREATING EMPLOYEE TABLE IN CODECAMP DATABASE
+-- CREATE TABLE codecamp.employee(
+--     emp_id INT PRIMARY KEY,
+--     first_name VARCHAR(40),
+--     last_name VARCHAR(40),
+--     birth_date DATE,
+--     sex VARCHAR(2),
+--     salary INT,
+--     super_id INT,
+--     branch_id INT
+-- );
+
+-- INSERT INTO codecamp.employee (emp_id, first_name, last_name, birth_date, sex, salary, super_id, branch_id) VALUE (100, 'David', 'Wallance', '', 'M', 250000, ' NULL', 1)
+
+-- CREATING BRANCH TABLE IN CODECAMP DATABASE
+-- CREATE TABLE codecamp.branch(
+--     branch_id INT PRIMARY KEY,
+--     branch_name VARCHAR(40),
+--     mgr_id INT,
+--     mgr_start_date DATE,
+--     FOREIGN KEY(mgr_id) REFERENCES codecamp.employee(emp_id) ON DELETE SET NULL
+-- );
+
+-- ALTER TABLE codecamp.employee
+-- ADD FOREIGN KEY(branch_id)
+-- REFERENCES codecamp.branch(branch_id)
+-- ON DELETE SET NULL;
+
+-- ALTER TABLE codecamp.employee
+-- ADD FOREIGN KEY(super_id)
+-- REFERENCES codecamp.employee(emp_id)
+-- ON DELETE SET NULL;
+
+-- now create client table
+-- CREATE TABLE codecamp.client(
+--     client_id INT PRIMARY KEY,
+--     client_name VARCHAR(40),
+--     branch_id INT,
+--     FOREIGN KEY (branch_id) REFERENCES codecamp.branch(branch_id) ON DELETE SET NULL
+-- );
+
+-- now create works_with table with two primary key(composite) which are also foreign key
+-- CREATE TABLE codecamp.works_with(
+--     emp_id INT,
+--     client_id INT,
+--     total_sales INT,
+--     PRIMARY KEY(emp_id, client_id),
+--     FOREIGN KEY(emp_id) REFERENCES codecamp.employee(emp_id) ON DELETE CASCADE,
+--     FOREIGN KEY(client_id) REFERENCES codecamp.client(client_id) ON DELETE CASCADE
+-- );
+
+-- now create branch supplier table with two primary key.ABORT
+-- CREATE TABLE codecamp.branch_supplier(
+--     branch_id INT,
+--     supplier_name VARCHAR(40),
+--     supply_type VARCHAR(40),
+--     PRIMARY KEY(branch_id, supplier_name),
+--     FOREIGN KEY(branch_id) REFERENCES codecamp.branch(branch_id) ON DELETE CASCADE
+-- );
+
