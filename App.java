@@ -60,14 +60,36 @@ public class App {
         return factorialString.length();
     }
 
+    static boolean power(int n){
+        for(int i = 1; i<= n; i++){
+            if( i*i == n){
+                return true;
+            }
+        }
+        return false;
+    }
     
+    static int oddOccurence(int[] n){
+        int res = n[0];
+        for(int i = 1; i<n.length; i++){
+            res ^= n[i];
+        }
+        return res;
+    }
+
+    static int xor(int a){
+        return a&(a-1);
+    }
     public static void main(String[] args) throws Exception {
         // System.out.println("Hello, World!");
         // System.out.println(fact(5));
         // System.out.println(abs(-32));
         // System.out.println(cel(34));
         // System.out.println(count(120));
-        System.out.println(factorialDigits(5));
-        
+        // System.out.println(factorialDigits(5));
+        // System.out.println(power(6));
+        // int[] n = {9,12,2,11,2,2,10,9,12,10,9,11,2};
+        // System.out.println(oddOccurence(n));
+        System.out.println(xor(5));
     }
 }
