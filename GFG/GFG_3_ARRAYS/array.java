@@ -1,5 +1,6 @@
 package GFG_3_ARRAYS;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class array {
@@ -241,6 +242,41 @@ public class array {
     static void lRotateD1(int[]arr, int n, int D){
         swap(arr, n);
     }
+
+    // leaders in an array , a number in an array is leader if it does not have any number greater than that on right of it
+    static void leader(int[] arr){
+        ArrayList<Integer> leader = new ArrayList<>();
+        int start = 0;
+        int end = arr.length-1;
+        while(start<end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+        int max = 0;
+        for(int i = 0; i<arr.length; i++){
+            if(arr[i]>max){
+                max = arr[i];
+                leader.add(max);
+            }
+        }
+        for(int i = leader.size()-1; i>=0; i--){
+            System.out.print(leader.get(i)+" ");
+        }
+    }
+
+    // max difference
+    static int maxDiff(int[] arr){
+        int res = arr[1] - arr[0];
+        for(int i = 0; i<arr.length-1; i++){
+            for(int j = i+1; j<arr.length; j++){
+                res = Math.max(res, arr[j]-arr[i]);
+            }
+        }
+        return res;
+    }
     public static void main(String[] args) {
 
         // System.out.println("Question 1");
@@ -290,8 +326,18 @@ public class array {
         // int[] arr = { 1, 2, 3, 4, 5 };
         // lRotate(arr);
 
-        System.out.println("GFG question 13");
-        int[] arr = { 1, 2, 3, 4, 5 };
-        lRotateD(arr, 2);
+        // System.out.println("GFG question 13");
+        // int[] arr = { 1, 2, 3, 4, 5 };
+        // lRotateD(arr, 2);
+
+        // System.out.println("GFG question 14");
+        // int[] arr = { 7,10,6,3,4,5,2 };
+        // int[] arr = { 10,20, 30 };
+        // int[] arr = { 30, 20, 10 };
+        // leader(arr);
+
+        System.out.println("GFG question 15;");
+        int[] arr = {2,10,10,6,4,8,1};
+        System.out.println(maxDiff(arr));
     }
 }
