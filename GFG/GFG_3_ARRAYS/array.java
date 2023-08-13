@@ -204,33 +204,34 @@ public class array {
     // left rotate or counter clockwise the array
     static void lRotate(int[] arr, int n) {
         int temp = arr[0];
-        n = arr.length-1;
+        n = arr.length - 1;
         for (int i = 1; i < arr.length; i++) {
             arr[i - 1] = arr[i];
         }
         arr[arr.length - 1] = temp;
         // for (int num : arr) {
-        //     System.out.print(num + " ");
+        // System.out.print(num + " ");
         // }
     }
 
     // left rotate an array by D elements
-    static void lRotateD(int[] arr, int D){
-        int n =arr.length-1;
-        for(int i = 0; i<D; i++){
+    static void lRotateD(int[] arr, int D) {
+        int n = arr.length - 1;
+        for (int i = 0; i < D; i++) {
             lRotate(arr, n);
         }
-        for(int num: arr){
-            System.out.print(num+" ");
+        for (int num : arr) {
+            System.out.print(num + " ");
         }
     }
-    // more efficient way , first reverse the arrat ans than rotate it 
+
+    // more efficient way , first reverse the arrat ans than rotate it
     // step 1
-    static void swap(int [] arr, int n){
+    static void swap(int[] arr, int n) {
         int start = 0;
-        int end = arr.length-1;
-        n = arr.length-1;
-        while(start<end){
+        int end = arr.length - 1;
+        n = arr.length - 1;
+        while (start < end) {
             int temp = arr[start];
             arr[start] = arr[end];
             arr[end] = temp;
@@ -238,17 +239,19 @@ public class array {
             end--;
         }
     }
+
     // step 2
-    static void lRotateD1(int[]arr, int n, int D){
+    static void lRotateD1(int[] arr, int n, int D) {
         swap(arr, n);
     }
 
-    // leaders in an array , a number in an array is leader if it does not have any number greater than that on right of it
-    static void leader(int[] arr){
+    // leaders in an array , a number in an array is leader if it does not have any
+    // number greater than that on right of it
+    static void leader(int[] arr) {
         ArrayList<Integer> leader = new ArrayList<>();
         int start = 0;
-        int end = arr.length-1;
-        while(start<end){
+        int end = arr.length - 1;
+        while (start < end) {
             int temp = arr[start];
             arr[start] = arr[end];
             arr[end] = temp;
@@ -256,26 +259,174 @@ public class array {
             end--;
         }
         int max = 0;
-        for(int i = 0; i<arr.length; i++){
-            if(arr[i]>max){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
                 max = arr[i];
                 leader.add(max);
             }
         }
-        for(int i = leader.size()-1; i>=0; i--){
-            System.out.print(leader.get(i)+" ");
+        for (int i = leader.size() - 1; i >= 0; i--) {
+            System.out.print(leader.get(i) + " ");
         }
     }
 
     // max difference
-    static int maxDiff(int[] arr){
+    static int maxDiff(int[] arr) {
         int res = arr[1] - arr[0];
-        for(int i = 0; i<arr.length-1; i++){
-            for(int j = i+1; j<arr.length; j++){
-                res = Math.max(res, arr[j]-arr[i]);
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                res = Math.max(res, arr[j] - arr[i]);
             }
         }
         return res;
+    }
+
+    // frequencies of a number, not done yet
+    static void frequency(int[] arr) {
+        int count = 0;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i - 1] == arr[i]) {
+                count++;
+                System.out.println(count);
+            } else if (arr[i - 1] != arr[i]) {
+                // System.out.println(count);
+            }
+        }
+    }
+
+    static int maxProfit(int[] arr, int start, int end) {
+        int profit = 0;
+        if (start >= end) {
+            return 0;
+        }
+        for (int i = start; i < end; i++) {
+            for (int j = i + 1; j <= end; j++) {
+                if (arr[j] > arr[i]) {
+                    int currProfit = arr[j] - arr[i] + maxProfit(arr, start, i - 1) + maxProfit(arr, j + 1, end);
+                    profit = Math.max(profit, currProfit);
+                }
+            }
+        }
+        return profit;
+
+    }
+
+    // more efficient approach
+    static int maxProfit(int[] arr) {
+        int profit = 0;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > arr[i - 1]) {
+                profit += (arr[i] - arr[i - 1]);
+            }
+        }
+        return profit;
+    }
+
+    // max consecutive 1's
+    static int con1(int[] arr) {
+
+        int ans = 0;
+        for (int i = 0; i < arr.length; i++) {
+            int count = 0;
+            for (int j = i; j < arr.length; j++) {
+                System.out.println(arr[i] + " " + arr[j]);
+                if (arr[j] == 1) {
+                    count++;
+                } else {
+                    break;
+                }
+                ans = Math.max(ans, count);
+            }
+
+        }
+        return ans;
+    }
+
+    // max sub array
+    static int subArray(int[] arr) {
+        int ans = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            int curr = 0;
+            for (int j = i; j < arr.length; j++) {
+                curr += arr[j];
+                ans = Math.max(ans, curr);
+            }
+        }
+        return ans;
+    }
+
+    // Max alternating sub Array
+    static int altSub(int[] arr) {
+        int res = 1;
+        int count = 1;
+        for (int i = 1; i < arr.length; i++) {
+            if ((arr[i] % 2 == 0 && arr[i - 1] % 2 != 0) || (arr[i] % 2 != 0 && arr[i - 1] % 2 == 0)) {
+                
+                count++;
+                res = Math.max(count, res);
+            } else {
+                count = 1;
+            }
+        }
+        return res;
+    }
+
+    // majority element
+    static int major(int[] arr){
+        int index = arr[0];
+        int count = 1;
+        int n = arr.length;
+        Arrays.sort(arr);
+        for(int i = 1; i<arr.length; i++){
+            if(arr[i-1] == arr[i]){
+                count++;
+                index = i;
+            }
+        }
+        if(count>n/2){
+            return index;
+        }
+        else{
+            return -1;
+        }
+    }
+
+    // Question 27, given a  with sum
+    static boolean subArray(int [] arr, int sum){
+        for(int i = 0; i<arr.length; i++){
+            for(int j = i+1; j<arr.length; j++){
+                System.out.println(i +" " + j);
+                if(arr[i] + arr[j] == sum){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    // more efficient approach
+    static boolean subArray1(int[] arr, int sum){
+        int start = 0;
+        int curr = 0;
+        for(int i = 0; i<arr.length; i++){
+            curr+=arr[i];
+            while(sum<curr){
+                curr-=arr[start];
+                start++;
+            }
+            if(curr == sum){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // question 29,prefix sum
+    static int getSum(int s, int e){
+        int sum = 0;
+        for(int i = s; i<=e; i++){
+            // sum+=arr[i]; 
+        }
+        return sum;
     }
     public static void main(String[] args) {
 
@@ -322,9 +473,10 @@ public class array {
         // int[] arr = { 0, 0, 0, 10, 0 };
         // rmZeroes(arr);
 
-        // System.out.println("GFG question 12");
-        // int[] arr = { 1, 2, 3, 4, 5 };
-        // lRotate(arr);
+        System.out.println("GFG question 12");
+        int[] arr = { 1, 2, 3, 4, 5 };
+        lRotateD(arr, 2);
+        // lRotate(arr, 0);
 
         // System.out.println("GFG question 13");
         // int[] arr = { 1, 2, 3, 4, 5 };
@@ -336,8 +488,38 @@ public class array {
         // int[] arr = { 30, 20, 10 };
         // leader(arr);
 
-        System.out.println("GFG question 15;");
-        int[] arr = {2,10,10,6,4,8,1};
-        System.out.println(maxDiff(arr));
+        // System.out.println("GFG question 15;");
+        // int[] arr = {2,10,10,6,4,8,1};
+        // System.out.println(maxDiff(arr));
+
+        // System.out.println("GFG question 15;");
+        // int[] arr = {10,10,10,10,25,30,30};
+        // frequency(arr);
+
+        // System.out.println();
+        // int[] arr = { 1, 5, 3, 8, 12 };
+        // System.out.println(maxProfit(arr, 0, arr.length - 1));
+
+        // System.out.println(maxProfit(arr));
+
+        // int[] arr = {0,1,1,0,1,1};
+        // System.out.println(con1(arr));
+
+        // System.out.println("GFG 18");
+        // int[] arr = {1,-2, 3, -1, 2};
+        // System.out.println(subArray(arr));
+
+        // System.out.println("GFG 22");
+        // int[] arr = { 10, 12, 14, 7, 8 };
+        // System.out.println(altSub(arr));
+
+        // System.out.println("GFG 23");
+        // int[] arr = {20,30,40,50,50,50,50,};
+        // System.out.println(major(arr));
+
+        // Question 27, subArray
+        // int[] arr = {1,4,20,3,1,10};
+        // int sum = 30;
+        // System.out.println(subArray1(arr, sum));
     }
 }
