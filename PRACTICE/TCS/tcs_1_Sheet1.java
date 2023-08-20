@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 
-import BASICS.hashSet;
-
 public class tcs_1_Sheet1 {
     static boolean perfect(int num) {
         if (num == 1) {
@@ -301,6 +299,45 @@ public class tcs_1_Sheet1 {
         System.out.println(arr[arr.length-1]);
     }
 
+    // Intersection of two arrays
+    static void interSection(int[] arr1, int[] arr2){
+        ArrayList<Integer> List = new ArrayList<>();
+        int j = 0;
+        int n1 = arr1.length;
+        int n2 = arr2.length;
+        if(n1>n2){
+            for(int i = 0; i<n1 && j<n2; i++){
+                if(arr1[i] == arr2[j]){
+                    List.add(arr1[i]);
+                    j++;
+                }
+            }
+        }
+        System.out.println(List);
+    }
+
+    // since we do not need duplilcate lements we will use hashset 
+    static void interSection1(int[] arr1, int[] arr2){
+        HashSet<Integer> set1 = new HashSet<>();
+        for(int num: arr1){
+            set1.add(num);
+        }
+
+        HashSet<Integer> set2 = new HashSet<>();
+        for(int num1: arr2){
+            if(set1.contains(num1)){
+                set2.add(num1);
+            }
+        }
+        int[] ans = new int[set2.size()];
+        int i =0;
+        for(int n : set2){
+            ans[i++] = n;
+        }
+        for(int an: ans){
+            System.out.print(an+" ");
+        }
+    }
     public static void main(String[] args) {
         // int num = 100000001;
         // System.out.println(perfect(num));
@@ -360,8 +397,13 @@ public class tcs_1_Sheet1 {
         // int[] arr = {4, 4, 4, 4, 4};
         // arithmatic(arr);
 
-        int[] arr = {2,2,3,3,1,1,5};
-        distinct(arr);
-        distinct1(arr);
+        // int[] arr = {2,2,3,3,1,1,5};
+        // distinct(arr);
+        // distinct1(arr);
+
+        // int[] arr1 = {4,9,5};
+        // int[] arr2 = {9,4,9,8,4};
+        // interSection1(arr1, arr2);
+
     }
 }
