@@ -21,4 +21,26 @@
 
 `CTRL` + `Shift` + `P` and type, `java clean`, and IDE will show you the suggestion tip for, `Java: Clean the Java language server workspace.` Upon selection, agree and restart the IDE. It will clean the language server workspace for you.
 
+- Creating Package
+ `javac -d .<file_name.java>` <!-- used to create package <name is specified in the .java file> -->
+ `javac -d *.<.java>` <!-- used to add all files in the same package -->
+ ` javac -d <folder name> * <.java>` <!-- her we r creating a folder where all u=our packages will be stored -->
 <hr color="red">
+
+<!-- 
+
+ --below code is must to understand the difference between arr[i++] and arr[i]+=
+
+int[] arr = {4,5,2,5,2,1,0,8,4,21,3,1,0};
+        int[] naya = new int[arr.length];
+        HashSet<Integer> set1 = new HashSet<>();
+        for(int num: arr){
+            set1.add(num);
+        }
+        int i = 0;
+        for(int num : set1){
+            naya[i]+= num;
+            System.out.print(num+" ");
+        }
+
+ -->

@@ -168,6 +168,35 @@ public class str_1_Sheet {
         
         System.out.println(reversedString);
     }
+    // pattern searching (Naive approach) 
+    static void pattern(String str1, String str2){
+        int m = str1.length();
+        int n = str2.length();
+        for(int i = 0; i<=m-n; i++){
+            int j;
+            for(j = 0; j<n; j++){
+                if(str1.charAt(i+j)!=str2.charAt(j)){
+                    break;
+                }
+            }
+            if(j == n){
+                System.out.println(i +" ");
+            }
+        }
+    }
+
+    // reverse words in a string 
+    static void strRev(String str){
+        String[] word = str.split(" ");
+
+        StringBuilder semiAns = new StringBuilder();    
+        
+        for(int i = word.length-1; i>=0; i--){
+            semiAns.append(word[i]).append(" ");
+        }
+
+        System.out.println(semiAns.toString());
+    }
     public static void main(String[] args) {
         //
         // char x = 'A';
@@ -203,7 +232,15 @@ public class str_1_Sheet {
         // String str = "geeksforgeeks";
         // reverseStr(str);
 
+        // String str = "hey ritu";
+        // reverseStr(str);
+
+        // String str1 = "aaaaa";
+        // String str2 = "aa";
+        // pattern(str1, str2);
+
+        // reverse words in string 
         String str = "hey ritu";
-        reverseStr(str);
+        strRev(str);
     }
 }

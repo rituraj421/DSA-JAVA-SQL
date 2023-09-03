@@ -1,6 +1,7 @@
 package PRACTICE.TCS;
 
 import java.util.HashSet;
+import java.util.stream.Collectors;
 
 public class tcs_2_sheet2 {
     // Q1 palindrome
@@ -51,7 +52,11 @@ public class tcs_2_sheet2 {
         for(int i = 0; i<sb.length(); i++){
             ans.add(sb.charAt(i));
         }
-        System.out.println(ans);
+        StringBuilder result = new StringBuilder();
+        for(char c : ans){
+            result.append(c);
+        }
+        System.out.println(result);
     }
     public static void main(String[] args) {
         // String str = "aba";
