@@ -23,4 +23,7 @@ public class Arrays {
          System.out.println(element);
         }
     }
+
+    public static void sort(int[] merge) {
+    }
 }
