@@ -1,9 +1,6 @@
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -197,7 +194,6 @@ public class App {
     // we r given a string , we need to print all the missing letters
     static void missing(String str){
         HashSet<Character> availChar = new HashSet<>();
-        HashMap<Integer, Integer> hs = new HashMap<>();
         StringBuilder notAvailChar = new StringBuilder();
 
         for(int i = 0; i<str.length(); i++){
