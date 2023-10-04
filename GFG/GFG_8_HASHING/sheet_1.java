@@ -1,5 +1,6 @@
 package GFG_8_HASHING;
 
+import java.util.Arrays;
 import java.util.HashMap;
 // import java.util.HashMap;
 import java.util.HashSet;
@@ -110,6 +111,29 @@ public class sheet_1 {
         }
         return false;
     }
+    // more than n/k occurances
+    // static void occur(int[] arr, int k){
+    //     Arrays.sort(arr);
+    //     int count = 0;
+    //     for(int i = 1; i<arr.length; i++){
+    //         if(arr[i] == arr[i-1]){
+    //             count++;
+    //         }
+    //         if(count>arr.length/k){
+    //             System.out.println(arr[i]);
+    //         }
+    //     }
+    // }
+    // efficient approach using hashMap
+    static void occurHsh(int[] arr, int k){
+        HashMap<Integer, Integer> hsm = new HashMap<>();
+        for(int x: arr){
+            hsm.put(x, hsm.getOrDefault(x, 0)+1);
+        }
+        for(Map.Entry <Integer,Integer> e:hsm.entrySet())
+            if(e.getValue()>arr.length/k)
+                System.out.print(e.getKey()+" ");
+    }
     public static void main(String[] args) {
         // basic hashmap
         // HashMap<String, Integer> m = new HashMap<>();
@@ -139,7 +163,12 @@ public class sheet_1 {
         // union(A, B);
 
         // sunArray
-        int[] arr = {4,-3, 2,1};
-        System.out.println(subArray(arr));
+        // int[] arr = {4,-3, 2,1};
+        // System.out.println(subArray(arr));
+
+        // n/k occurances
+        int[] arr = {10,10,20,30,20,10,10};
+        // occur(arr, 2);
+        occurHsh(arr, 2);
     }
 }
