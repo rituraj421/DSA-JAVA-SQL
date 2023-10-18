@@ -62,12 +62,72 @@ public class tcs_gfg_array_sheet {
         return "NO";
     }
 
+    // count symmetric pairs
+    static void symmetricPai(int[][] A) {
+        for (int i = 0; i < A.length; i++) {
+            for (int j = i + 1; j < A.length; j++) {
+                if (A[i][0] == A[j][1] && A[i][1] == A[j][0]) {
+                    System.out.println(A[i][0] + "," + A[i][1]);
+                }
+            }
+        }
+    }
+
+    // count rocks
+    static void rocks(int[] sample, int[][] range) {
+        int count1 = 0;
+        int count2 = 0;
+
+        // Arrays.sort(sample);
+        for (int j = 0; j < 2; j++) {
+            int l1 = range[j][0];
+            int l2 = range[0][1];
+            int h = range[j][0];
+            int h2 = range[j][j];
+            for (int i = 0; i < sample.length; i++) {
+                if (sample[i] >= l1 && sample[i] <= l2) {
+                    count1++;
+                }
+                if (sample[i] >= h && sample[i] <= h2) {
+                    count2++;
+                }
+            }
+        }
+        System.out.println(count1 + " " + count2);
+    }
+
+    // reverse array ir string 
+    static void reverse(int[] arr){
+        for(int i = arr.length-1; i>=0; i--){
+            System.out.print(arr[i]+" ");
+        }
+    }
     public static void main(String[] args) {
         // int[] arr = { -1, 2, -1, 3, 2 };
         // nonRepeat(arr);
 
-        int[] arr = { 1, 2, 3, 4, 5 };
+        // int[] arr = { 1, 2, 3, 4, 5 };
         int d = 2;
-        rotate(arr, d);
+        // rotate(arr, d);
+
+        int[][] A = { { 11, 20 },
+                { 30, 40 },
+                { 5, 10 },
+                { 40, 30 },
+                { 10, 5 } };
+        // symmetricPai(A);
+
+        int[] sample = { 345, 604, 321, 433, 704, 470, 808, 718, 517, 811 };
+        int[][] ranges = {
+                { 300, 380 },
+                { 400, 700 }
+        };
+
+        rocks(sample, ranges);
+
+        // reverse array
+        int[] arr = {1,2,3};
+        reverse(arr);
+
     }
 }
