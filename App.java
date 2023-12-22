@@ -183,32 +183,58 @@ public class App {
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '-') {
                 sb = s.charAt(i) + sb;
-            } if
-            (s.charAt(i) !='-') {
-                sb = sb+s.charAt(i) ;
+            }
+            if (s.charAt(i) != '-') {
+                sb = sb + s.charAt(i);
             }
         }
         System.out.println(sb);
     }
 
     // we r given a string , we need to print all the missing letters
-    static void missing(String str){
+    static void missing(String str) {
         HashSet<Character> availChar = new HashSet<>();
         StringBuilder notAvailChar = new StringBuilder();
 
-        for(int i = 0; i<str.length(); i++){
+        for (int i = 0; i < str.length(); i++) {
             availChar.add(str.charAt(i));
         }
 
-        // code for missing letters 
-        for(char c = 'a'; c<='z'; c++){
-            if(!availChar.contains(c)){
+        // code for missing letters
+        for (char c = 'a'; c <= 'z'; c++) {
+            if (!availChar.contains(c)) {
                 notAvailChar.append(c);
             }
         }
         System.out.println(availChar);
         System.out.println(notAvailChar.toString());
     }
+// max sum sub array;
+    static int maxSum(int[] arr, int k) {
+        int ans = Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length - k; i++) {
+            int sum = 0;
+            for (int j = i; j < i + k; j++) {
+                sum += arr[j];
+            }
+            ans = Math.max(ans, sum);
+        }
+        return ans;
+    }
+
+    // max product
+    static long maxProduct(int[] ar1, int n){
+        long ans = Integer.MIN_VALUE;
+        for(int i = 0; i<ar1.length-n; i++){
+            long product = 1;
+            for(int j = i; j<i+n; j++){
+                product *= ar1[j];
+            }
+            ans = Math.max(ans, product);
+        }
+        return ans;
+    }
+
     public static void main(String[] args) throws Exception {
         // System.out.println("Hello, World!");
         // System.out.println(fact(5));
@@ -253,8 +279,15 @@ public class App {
         // String s = "Move-Hyphens-to-Front";
         // dec(s);
 
-        String str = "your input string";
-        missing(str);
+        // String str = "your input string";
+        // missing(str);
         sc.close();
+
+        // max sum subrray
+        // int[] arr = { 1, 8, 30, -5, 20, 7 };
+        // System.out.println(maxSum(arr, 3));
+
+        int[] ar1 = {6 ,-3 ,-10, 0 ,2};
+        System.out.println(maxProduct(ar1, 5));
     }
 }
