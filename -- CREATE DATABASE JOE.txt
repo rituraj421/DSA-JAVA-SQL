@@ -1,0 +1,54 @@
+-- CREATE DATABASE JOE
+-- CREATE TABLE JOE.Customer(
+--     FirstName varchar(50),
+--     LastName varchar(50),
+--     Age int
+-- );
+-- INSERT INTO JOE.customer 
+-- (FirstName, LastName, Age) VALUES ('Joey', 'Blue', 40);
+-- INSERT INTO JOE.customer (FirstName, LastName, Age) VALUES 
+-- ('Barry', 'Bonds', 50);
+-- INSERT INTO JOE.customer (FirstName, LastName, Age) VALUES 
+-- ('Mike', 'Schmidt', 60);
+-- INSERT INTO JOE.customer (FirstName, LastName, Age) VALUES 
+-- ('Mike', 'Schmidt1', 61);
+-- INSERT INTO JOE.customer (FirstName, LastName, Age) VALUES 
+-- ('Mike', 'Schmidt2', 62);
+-- INSERT INTO JOE.customer (FirstName, LastName, Age) VALUES 
+-- ('Mike', 'Schmidt3', 63);
+-- INSERT INTO JOE.customer (FirstName, LastName, Age) VALUES 
+-- ('Mike', 'Schmidt4', 64);
+-- INSERT INTO JOE.customer (FirstName, LastName, Age) VALUES 
+-- ('Mike', 'Schmidt5', 65);
+-- SELECT Firstname FROM JOE.customer WHERE age = 40;
+-- UPDATE JOE.customer set Age = 35 WHERE FirstName = 'Joey' and LastName = 'Blue';
+-- delete statement
+-- DELETE JOE.customer WHERE FirstName = 'Joey' and LastName Like 'Blue'; 
+-- `JOINS`
+-- CREATE TABLE JOE.customer1 (
+--     CustomerId int NOT NULL,
+--     CityId int NULL,
+--     CustomerName varchar(50) NOT NULL
+-- ) 
+-- INSERT INTO JOE.customer1 (CustomerId, CityId, CustomerName) VALUES (1,1,"N'Sally Smith");
+-- INSERT INTO JOE.customer1 (CustomerId, CityId, CustomerName) VALUES (2,1,"N'Bob Smith");
+-- INSERT INTO JOE.customer1 (CustomerId, CityId, CustomerName) VALUES (3,2,"N'Tom Smith");
+-- INSERT INTO JOE.customer1 (CustomerId, CityId, CustomerName) VALUES (4,NULL,"N'Mary Smith");
+-- CITY TABLE 
+-- CREATE TABLE JOE.city1 (
+--     CityId int NOT NULL,
+--     CityName VARCHAR(50) NOT NULL
+-- );
+-- INSERT INTO JOE.city1(CityId, CityName) VALUES(1, "N'Kansas City");
+-- DELETE FROM JOE.city1 where CityId = 2;
+-- INSERT INTO JOE.city1(CityId, CityName) VALUES(1, "N'Kansas City");
+-- INSERT INTO JOE.city1(CityId, CityName) VALUES(2, "N'New York");
+-- INSERT INTO JOE.city1(CityId, CityName) VALUES(3, "N'Houston");
+-- SELECT * FROM JOE.customer1 INNER JOIN JOE.city1 on JOE.customer1.CityId = JOE.city1.CityId;
+-- SELECT * FROM JOE.customer1 LEFT JOIN JOE.city1 on JOE.customer1.CityId = JOE.city1.CityId;
+-- SELECT * FROM JOE.customer1 RIGHT JOIN JOE.city1 on JOE.customer1.CityId = JOE.city1.CityId;
+
+SELECT *
+FROM JOE.City1;
+SELECT *
+FROM JOE.customer1;

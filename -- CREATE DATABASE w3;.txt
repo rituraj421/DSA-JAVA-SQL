@@ -1,0 +1,43 @@
+-- CREATE DATABASE w3;
+
+-- CREATE TABLE w3.emp(
+--     customerId INT,
+--     customerName VARCHAR(100),
+--     contactName VARCHAR(40),
+--     address VARCHAR(100),
+--     city VARCHAR(20),
+--     postalCode VARCHAR(20),
+--     country VARCHAR(20)
+-- );
+
+-- INSERT INTO w3.emp (customerId,customerName,contactName,address,city,postalCode,country) VALUES(1,'Alfreds Futterkiste','Maria Anders','Obere Str. 57','Berlin','12209', 'Germany');
+-- INSERT INTO w3.emp (customerId,customerName,contactName,address,city,postalCode,country) VALUES(2,'Ana Trujillo Emparedados y helados','Ana Trujillo','Avda. de la Constitución 2222','México D.F.','05021', 'Mexico');
+-- INSERT INTO w3.emp (customerId,customerName,contactName,address,city,postalCode,country) VALUES(3,'Antonio Moreno Taquería','Antonio Moreno','Mataderos 2312','México D.F.','05023', 'Mexico');
+-- INSERT INTO w3.emp (customerId,customerName,contactName,address,city,postalCode,country) VALUES(4,'Around the Horn','Thomas Hardy','120 Hanover Sq.','London','WA1 1DP', 'UK');
+-- INSERT INTO w3.emp (customerId,customerName,contactName,address,city,postalCode,country) VALUES(5,'Berglunds snabbköp','Christina Berglund','Berguvsvägen 8','Luleå','S-958 22', 'Sweden');
+
+-- SELECT * FROM w3.emp;
+
+-- SELECT * FROM w3.emp WHERE Country = 'Mexico';
+
+-- Use the NOT keyword to select all records where City is NOT "Berlin".
+
+-- SELECT * FROM w3.emp WHERE NOT City = 'Berlin';
+
+-- SELECT * FROM w3.emp WHERE customerId = 32;
+
+-- SELECT * FROM w3.emp ORDER BY country DESC;
+
+-- SELECT * FROM w3.emp ORDER BY country ASC , customerName DESC;
+
+-- ALTER TABLE w3.emp ADD COLUMN price INT;
+
+-- UPDATE w3.emp 
+-- DELETE price 
+-- WHERE customerId = 2;
+
+-- SELECT Min(price) from w3.emp;
+-- SELECT AVG(price) from w3.emp;
+
+SELECT COUNT(price) from w3.emp;
+-- SELECT * FROM w3.emp;
