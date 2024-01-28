@@ -2,7 +2,6 @@ package GFG_7_MATRIX;
 
 import java.util.Scanner;
 
-import SORTING.mergeSort.sort1;
 
 public class sheet_1 {
     static void basic(int[][] arr) {
