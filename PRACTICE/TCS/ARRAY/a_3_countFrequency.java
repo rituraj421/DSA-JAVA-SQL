@@ -10,9 +10,9 @@ public class a_3_countFrequency {
             map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
         }
         System.out.println("Number\tFrequency");
-        for (int i = 0; i <= p; i++) {
-            int frequency = map.getOrDefault(i, 0);
-            System.out.println(i + "\t" + frequency);
+        for (int i = 0; i <arr.length; i++) {
+            int frequency = map.getOrDefault(arr[i], 0);
+            System.out.println(arr[i] + "\t" + frequency);
         }
     }
 
