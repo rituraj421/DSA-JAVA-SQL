@@ -1,11 +1,11 @@
 package GFG_9_LINKEDLIST;
 
 // insert at the end of linked list
-class Node {
+ class Noder {
     int data;
-    Node next;
+    Noder next;
 
-    Node(int x) {
+    Noder(int x) {
         data = x;
         next = null;
     }
@@ -24,8 +24,8 @@ class Node1 {
 
 public class sheet_2 {
 
-    static void printList(Node head) {
-        Node curr = head;
+    static void printList(Noder head) {
+        Noder curr = head;
         while (curr != null) {
             System.out.print(curr.data + "->");
             curr = curr.next;
@@ -33,12 +33,12 @@ public class sheet_2 {
         System.out.println("null");
     }
 
-    static void addEnd(Node head, int y) {
-        Node end = new Node(y);
+    static void addEnd(Noder head, int y) {
+        Noder end = new Noder(y);
         if (head == null) {
             return;
         }
-        Node curr = head;
+        Noder curr = head;
         while (curr.next != null) {
             curr = curr.next;
         }
@@ -72,10 +72,10 @@ public class sheet_2 {
         return head1.next;
     }
     public static void main(String[] args) {
-        Node head = new Node(10);
-        Node n1 = new Node(20);
-        Node n2 = new Node(30);
-        Node n3 = new Node(40);
+        Noder head = new Noder(10);
+        Noder n1 = new Noder(20);
+        Noder n2 = new Noder(30);
+        Noder n3 = new Noder(40);
 
         head.next = n1;
         n1.next = n2;
