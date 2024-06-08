@@ -19,5 +19,12 @@ public class file1 {
         double ans = y/x;
         System.out.println(ans);
 
+        // new task
+        int sum = a+b;
+        int product = a*b;
+        int quotient = a%b;
+
+        System.out.println(String.format("The sum is: %s, product is:%s, quotient is: %s", sum, product, quotient));
+
     }
 }
