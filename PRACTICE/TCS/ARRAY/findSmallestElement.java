@@ -7,6 +7,8 @@ public class findSmallestElement {
         // 1. using sorting
         // 2. using linear search
         // 3. using min function
+        // hrere we will use min function as its time complexity is O(n) which is less than sorting(O(nlogn)
+        
         int min = arr[0];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < min) {
